@@ -1,0 +1,6 @@
+{
+  "type": "maintenance",
+  "title": "Maintenance Ongoing",
+  "message": "Servers are being updated. Please wait.",
+  "active": true
+}
