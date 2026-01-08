@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <!-- DISABLE ZOOM -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <title>DARKVENOM VPN – Admin Panel</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="page">
+<div class="container">
 
   <!-- HEADER -->
   <div class="header">
@@ -16,25 +21,54 @@
     <p>Admin Control Panel</p>
   </div>
 
-  <!-- LOGIN CARD -->
+  <!-- LOGIN -->
   <div class="card" id="loginBox">
     <h2>Admin Login</h2>
 
-    <input type="text" id="username" placeholder="Admin Username">
-    <input type="password" id="password" placeholder="Admin Password">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
 
-    <button onclick="login()">LOGIN</button>
-
-    <p class="hint">Authorized access only</p>
+    <button onclick="login()">Login</button>
   </div>
 
   <!-- ADMIN PANEL -->
   <div class="card hidden" id="adminPanel">
-    <h2>Welcome, Admin</h2>
 
-    <button onclick="alert('Edit app.json')">App Control</button>
-    <button onclick="alert('Edit message.json')">Messages</button>
-    <button onclick="alert('Manage tweaks')">Tweaks</button>
+    <h2>Dashboard</h2>
+
+    <div class="section">
+      <h3>🔧 App Control</h3>
+      <button onclick="alert('Edit app.json')">App Status / Maintenance</button>
+      <button onclick="alert('Force Update Message')">Force Update Message</button>
+    </div>
+
+    <div class="section">
+      <h3>📢 Messages & Notifications</h3>
+      <button onclick="alert('Edit message.json')">Send Message</button>
+      <button onclick="alert('Clear Old Messages')">Clear Old Messages</button>
+    </div>
+
+    <div class="section">
+      <h3>⚙️ Tweaks & Config</h3>
+      <button onclick="alert('Manage Tweaks')">Manage Tweaks</button>
+      <button onclick="alert('Reload Config')">Reload Config</button>
+    </div>
+
+    <div class="section">
+      <h3>📦 APK Management</h3>
+      <button onclick="alert('Upload APK')">Upload New APK</button>
+      <button onclick="alert('Set Download Link')">Set Download Link</button>
+    </div>
+
+    <button class="logout" onclick="logout()">Logout</button>
+
+  </div>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>    <button onclick="alert('Manage tweaks')">Tweaks</button>
 
     <button class="logout" onclick="logout()">Logout</button>
   </div>
