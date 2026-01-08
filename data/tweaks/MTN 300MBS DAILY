@@ -1,0 +1,12 @@
+{
+  "id": "za_mtn_01",
+  "name": "MTN🇿🇦300MBS DAILY",
+  "country": "SA",
+  "network": "MTM SA",
+  "description": "MTN 300MBS Daily",
+  "enabled": true,
+  "config": {
+    "sni": "waterbergcollege.co.za",
+    "payload": "HTTP/1.0[crlf]Host: http://waterbergcollege.co.za[crlf]Connection: keep-alive[crlf]X-Online-Host: waterbergcollege.co.za[crlf][crlf]`"
+  }
+}
