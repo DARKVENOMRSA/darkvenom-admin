@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <!-- DISABLE ZOOM -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-  <title>DARKVENOM VPN – Admin Panel</title>
-
-  <link rel="stylesheet" href="style.css">
+<title>DARKVENOM VPN – Admin Panel</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
@@ -24,17 +23,62 @@
   <!-- LOGIN -->
   <div class="card" id="loginBox">
     <h2>Admin Login</h2>
-
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
     <button onclick="login()">Login</button>
   </div>
 
-  <!-- ADMIN PANEL -->
+  <!-- ADMIN -->
   <div class="card hidden" id="adminPanel">
 
     <h2>Dashboard</h2>
+
+    <!-- APP CONTROL -->
+    <div class="section">
+      <h3>App Control</h3>
+      <input id="version" placeholder="Latest Version (e.g. 1.0)">
+      <input id="apkLink" placeholder="APK Download Link">
+      <label>
+        <input type="checkbox" id="forceUpdate">
+        Force Update
+      </label>
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="section">
+      <h3>Global Message</h3>
+      <input id="msgTitle" placeholder="Message Title">
+      <textarea id="msgBody" placeholder="Message text"></textarea>
+      <label>
+        <input type="checkbox" id="msgActive">
+        Message Active
+      </label>
+    </div>
+
+    <!-- TWEAK -->
+    <div class="section">
+      <h3>Add New Tweak</h3>
+      <input id="tweakName" placeholder="Tweak Name">
+      <input id="tweakSNI" placeholder="SNI Host">
+      <textarea id="tweakPayload" placeholder="Payload"></textarea>
+      <label>
+        <input type="checkbox" id="tweakEnabled" checked>
+        Enabled
+      </label>
+    </div>
+
+    <button onclick="generateJSON()">Generate JSON</button>
+    <button class="logout" onclick="logout()">Logout</button>
+
+    <pre id="output"></pre>
+
+  </div>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>    <h2>Dashboard</h2>
 
     <div class="section">
       <h3>🔧 App Control</h3>
