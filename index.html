@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DARKVENOM VPN – Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="assets/logo.png" class="logo">
+    <h1>DARKVENOM VPN</h1>
+    <p>Admin Control Panel</p>
+  </div>
+
+  <!-- LOGIN CARD -->
+  <div class="card" id="loginBox">
+    <h2>Admin Login</h2>
+
+    <input type="text" id="username" placeholder="Admin Username">
+    <input type="password" id="password" placeholder="Admin Password">
+
+    <button onclick="login()">LOGIN</button>
+
+    <p class="hint">Authorized access only</p>
+  </div>
+
+  <!-- ADMIN PANEL -->
+  <div class="card hidden" id="adminPanel">
+    <h2>Welcome, Admin</h2>
+
+    <button onclick="alert('Edit app.json')">App Control</button>
+    <button onclick="alert('Edit message.json')">Messages</button>
+    <button onclick="alert('Manage tweaks')">Tweaks</button>
+
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
